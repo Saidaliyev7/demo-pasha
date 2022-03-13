@@ -1,0 +1,17 @@
+.total-users{
+   
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin: 20px auto;
+    justify-content: space-between;
+    .users{
+        font-weight: bold;
+    }
+    .add-user{
+        button {
+            background-color: #3f51b5;
+            color: #fff;
+        }
+    }
+}

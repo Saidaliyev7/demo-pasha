@@ -1,0 +1,24 @@
+
+
+  <div class="total-users">
+      <div class="users">
+        Toplam istifadəçilər : {{paginationData?.totalData}}
+      </div>
+      <div class="add-user">
+        <button mat-button color="primary" (click)="redirrectToAdd()">Elave et</button>
+      </div>
+  </div>
+
+  <div class="container">
+        <div class="filter">
+          <filter></filter>
+        </div>
+        <div class="data-holder">
+            <dashboard-table></dashboard-table>
+        </div>
+        <div class="pagination">
+            <pagination></pagination>
+        </div>
+  </div>
+
+  <router-outlet></router-outlet>

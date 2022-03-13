@@ -1,0 +1,34 @@
+<div class="filter-holder">
+    <form (submit)="onSubmitForm()" [formGroup]="filterForm" class="filter-form">
+        <mat-form-field class="input" appearance="fill">
+          <mat-label>Ad</mat-label>
+          <input formControlName='name' matInput placeholder="Ad" value="">
+        </mat-form-field>
+        <mat-form-field class="input" appearance="fill">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName='email' placeholder="Email" value="">
+          </mat-form-field>
+          <mat-form-field class="input" appearance="fill">
+            <mat-label>Cins</mat-label>
+            <mat-select formControlName='gender'>
+              <mat-option *ngFor="let gender of genders" [value]="gender.name">
+                {{gender.displayName}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field class="input" appearance="fill">
+            <mat-label>Status</mat-label>
+            <mat-select formControlName='status'>
+              <mat-option *ngFor="let status of statuses" [value]="status.name">
+                {{status.displayName}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <div class="buttons-holder">
+            <button type="submit"  mat-raised-button color="primary">Axtar</button>
+            <button (click)="resetForm()"  mat-raised-button>Təmizlə</button>
+          </div>
+        
+      </form>
+</div>
