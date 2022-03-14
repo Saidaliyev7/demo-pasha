@@ -1,0 +1,18 @@
+.filter-holder{
+    display: flex;
+    width: 80%;
+    margin: 20px auto;
+    .filter-form{
+        display: flex;
+        align-items: center;
+        .input{
+            margin-right: 10px;
+        }
+        .buttons-holder{
+            margin-left: 50px;
+            button{
+                margin-right: 20px;
+            }
+        }
+    }
+}

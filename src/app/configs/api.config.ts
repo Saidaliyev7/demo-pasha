@@ -8,6 +8,6 @@ export const API={
         add:baseApi+'users'
     },
     Posts:{
-        get:baseApi+
+        get:baseApi+'posts'
     }
 }

@@ -1,0 +1,44 @@
+.user-add-holder{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .overlay{
+        width: 100%;
+        position: absolute;
+        left: 0;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.473);
+        z-index: 5;
+    }
+    .content{
+        min-width: 500px;
+        background-color: white;
+        border-radius: 5px;
+        z-index: 55;
+        padding: 20px;
+        .title{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            .text{
+                font-weight: bold;
+                font-size: 20px;
+            }   
+            .icon{
+                    cursor: pointer;
+            }
+        }
+        .add-holder{
+            .add-form{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}

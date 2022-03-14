@@ -1,0 +1,33 @@
+<div class="user-add-holder">
+    <div class="content">
+        <div class="holder">
+            <div class="title">
+                <div class="text">
+                    {{isAdd?"Yeni post əlavə et":'Postu dəyiş'}} 
+                </div>
+                <div class="icon" (click)="goBackToDashboard()">
+                    <mat-icon>close</mat-icon>
+                </div>
+            </div>
+            <div class="add-holder">
+                <form (submit)="onSubmitForm()" [formGroup]="addForm" class="add-form">
+                    <mat-form-field class="input" appearance="fill">
+                      <mat-label>Başlığ</mat-label>
+                      <input formControlName='title' matInput placeholder="Başlığ" value="">
+                    </mat-form-field>
+                    <mat-form-field class="input" appearance="fill">
+                        <mat-label>Mətn</mat-label>
+                        <input matInput formControlName='body' placeholder="Mətn" value="">
+                      </mat-form-field>
+                      <div class="buttons-holder">
+                        <button type="submit"  mat-raised-button color="primary">Əlavə et</button>
+                      </div>
+                    
+                  </form>
+            </div>
+        </div>
+    </div>
+    <div (click)="goBackToDashboard()"  class="overlay">
+        
+    </div>
+</div>

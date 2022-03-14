@@ -11,7 +11,7 @@ export class QueryService {
     ) {}
     
     changeQuery(params:any) {
-        this.router.navigate(['.'], { relativeTo: this.route, queryParams: { ...params }});
+        this.router.navigate([], { relativeTo: this.route, queryParams: { ...params }});
     }
     getQueryParams(){
         return this.route.queryParams
@@ -19,6 +19,14 @@ export class QueryService {
 
     getIdFromParams(){
       return window.location.href.split("/")[window.location.href.split("/").length-1];
+    }
+
+    getIdFromParamsPosts(){
+        if(this.getIdFromParams()=='post'){
+            return window.location.href.split("/")[window.location.href.split("/").length-2];
+        }else{
+           return  this.getIdFromParams();
+        }
     }
     
 }

@@ -4,14 +4,14 @@ import { API } from 'src/app/configs/api.config';
 import { IRequestModelUser } from 'src/app/model/request.interface';
 
 @Injectable()
-export class UserChangeService {
+export class PostChangeService {
     constructor(private httpClient:HttpClient) { }
     
 
-    addUserToDashboard(body:IRequestModelUser){
-         return  this.httpClient.post(API.Users.add,body);
+    addPostToDashboard(body:any){
+         return  this.httpClient.post(API.Posts.get,body);
     }
-    editUser(body:IRequestModelUser,id:string|number){
+    editPost(body:any,id:string|number){
         return  this.httpClient.put(API.Users.add+`/${id}`,body);
    }
 }

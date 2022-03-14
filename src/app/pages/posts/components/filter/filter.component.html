@@ -1,0 +1,18 @@
+<div class="filter-holder">
+    <form (submit)="onSubmitForm()" [formGroup]="filterForm" class="filter-form">
+        <mat-form-field class="input" appearance="fill">
+          <mat-label>Başlığ</mat-label>
+          <input formControlName='title' matInput placeholder="Ad" value="">
+        </mat-form-field>
+        <mat-form-field class="input" appearance="fill">
+            <mat-label>Mətn</mat-label>
+            <input matInput formControlName='email' placeholder="Email" value="">
+          </mat-form-field>
+
+          <div class="buttons-holder">
+            <button type="submit"  mat-raised-button color="primary">Axtar</button>
+            <button (click)="resetForm()"  mat-raised-button>Təmizlə</button>
+          </div>
+        
+      </form>
+</div>

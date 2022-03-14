@@ -1,11 +1,26 @@
 <div class="container">
+    <div class="buttons-holder">
+        <button mat-button color="primary" class="go-to-dashboard" (click)="goToDashboard()"><div >
+            Ana səhifəyə geri dön
+    </div>
+    
+    </button>
+    <button (click)="goToAddPost()" mat-button color="primary" class="go-to-dashboard" ><div>
+        məqalə əlavə et
+      </div>
+      </button>
+    </div>
+
+    <mat-card>{{user?.name}} aid postlar {{posts$.value?.length}} </mat-card>
     <div class="filter">
-      <!-- <filter></filter> -->
+     <posts-filter [userId]='user?.id' ></posts-filter>
     </div>
     <div class="data-holder">
-        <table></table>
+        <post-table></post-table>
     </div>
     <div class="pagination">
         <!-- <pagination></pagination> -->
     </div>
 </div>
+
+<router-outlet></router-outlet>

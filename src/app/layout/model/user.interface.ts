@@ -41,6 +41,6 @@ export const statusList: IStatus[] = [
     },
     {
         displayName: 'Deaktiv',
-        name: 'deactive'
+        name: 'inactive'
     }
 ]

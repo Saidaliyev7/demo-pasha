@@ -44,9 +44,7 @@ export class DashboardService {
     }
 
     getUserById(id:string){
-        return this.httpClient.get(API.Users.get+`/${id}`,{
-            observe:'response',
-        });
+        return this.httpClient.get(API.Users.get+`/${id}`);
     }
 
     deleteUser(id:number){
